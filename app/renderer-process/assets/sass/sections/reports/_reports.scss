@@ -1,0 +1,141 @@
+.reports {
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      display: flex;
+      gap: 0 15px;
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: $white;
+      border: 1px solid $gray;
+    }
+  }
+
+  .table-wrapper {
+    background-color: $white;
+    border: 1px solid $gray;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    table {
+      margin: 10px 0;
+      padding-top: 20px;
+
+      tr {
+        th,
+        td {
+          border-right: 1px solid;
+        }
+
+        th:first-child,
+        td:first-child {
+          border-left: 1px solid;
+        }
+
+        th:not(:first-child),
+        td:not(:first-child) {
+          text-align: center;
+        }
+
+        td:last-child {
+          // display: flex;
+          justify-content: center;
+        }
+      }
+
+      button {
+        margin: 0 5px;
+        font-size: 12px;
+        padding: 3px 7px;
+        background-color: $veryLightBlue;
+
+        &:active {
+          background-color: $white;
+          border: 1px solid $gray;
+        }
+      }
+
+      thead {
+        tr:first-child {
+          th {
+            border-top: 1px solid;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          cursor: pointer;
+          td {
+            table {
+              padding: 0 !important;
+              margin: 0;
+              width: 100%;
+              font-size: 12px;
+
+              tr {
+                td,
+                th {
+                  border-left: 0 !important;
+                  border-right: 0;
+                  background-color: $veryLightBlue;
+
+                  &:not(:last-child) {
+                    border-right: 1px solid #ddd !important;
+                  }
+                }
+
+                th {
+                  border-bottom-color: #ddd;
+                  border-top-color: #ddd !important;
+                }
+              }
+
+              thead {
+                tr {
+                  td {
+                    border-bottom: none;
+                  }
+                }
+                tr:last-child {
+                  th {
+                    border-top: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      tfoot {
+        tr {
+          th {
+            border-bottom: 1px solid;
+          }
+        }
+      }
+    }
+
+    select,
+    input[type='search'] {
+      background-color: #ffffff !important;
+      border-radius: 0% !important;
+
+      &:focus,
+      &:active {
+        border: 1px solid !important;
+      }
+    }
+
+    .export-to-excel {
+      position: absolute;
+      left: 50%;
+      padding: 5px 10px;
+      font-size: 13px;
+      z-index: 1;
+    }
+  }
+}

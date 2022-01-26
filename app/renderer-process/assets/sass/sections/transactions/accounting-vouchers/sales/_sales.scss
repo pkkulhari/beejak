@@ -1,0 +1,94 @@
+section#sales {
+  .party-detail {
+    & > div {
+      flex-direction: column;
+
+      .title {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid $gray;
+        padding-bottom: 15px;
+      }
+
+      & > div {
+        display: flex;
+        gap: 15px;
+      }
+    }
+  }
+
+  .stock-items-detail {
+    flex-direction: column;
+    & > div {
+      position: relative;
+
+      .input {
+        position: relative;
+        input,
+        select {
+          width: 150px;
+        }
+
+        textarea {
+          width: 300px;
+        }
+
+        .sub-input {
+          display: flex;
+          position: relative;
+
+          input:first-child {
+            border-right: none;
+          }
+        }
+
+        .stock {
+          position: absolute;
+          right: 0;
+          bottom: -18px;
+          font-size: 12px;
+          background-color: #fff;
+          border: 1px solid gray;
+          padding: 2px;
+          display: none;
+        }
+      }
+
+      .add-row-btn,
+      .remove-row-btn {
+        z-index: 1;
+        user-select: none;
+        background-color: $lightBlack;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 0.3px 8px;
+        border: 1px solid $gray;
+        border-bottom: none;
+        border-right: none;
+      }
+
+      .remove-row-btn {
+        right: 26px;
+      }
+    }
+
+    & > div:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .footer {
+    & > div {
+      background-color: $veryLightBlue;
+
+      .input {
+        input {
+          width: 150px;
+        }
+      }
+    }
+  }
+}

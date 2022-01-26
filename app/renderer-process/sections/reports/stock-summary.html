@@ -1,0 +1,61 @@
+<template>
+  <section id="stock-summary" class="reports">
+    <div class="header">
+      <div class="column">
+        <div class="input">
+          <label>Inventory</label>
+          <select id="inventory" tabindex="1">
+            <option value="stock-items" selected>Stock Items</option>
+            <option value="stock-groups">Stock Groups</option>
+          </select>
+        </div>
+      </div>
+      <div class="column">
+        <div class="input">
+          <label for="first-date">From <span class="required">*</span></label>
+          <input type="text" id="first-date" tabindex="3" required />
+        </div>
+        <div class="input">
+          <label for="second-date">To <span class="required">*</span></label>
+          <input type="text" id="second-date" tabindex="4" required />
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <div class="button export-to-excel">Export to Excel</div>
+      <table id="stock_summary_data_table" class="display">
+        <thead>
+          <tr>
+            <th rowspan="3">Name</th>
+            <th colspan="2" rowspan="2">Opening Balance</th>
+            <th colspan="2" rowspan="2">Inward</th>
+            <th colspan="6">Outward</th>
+            <th colspan="2" rowspan="2">Closing Balance</th>
+            <th rowspan="3">Actions</th>
+          </tr>
+          <tr>
+            <th colspan="2">Billing</th>
+            <th colspan="2">Scheme</th>
+            <th colspan="2">Total</th>
+          </tr>
+          <tr>
+            <th>Quantity</th>
+            <th>Value</th>
+            <th>Quantity</th>
+            <th>Value</th>
+            <th>Quantity</th>
+            <th>Value</th>
+            <th>Quantity</th>
+            <th>Value</th>
+            <th>Quantity</th>
+            <th>Value</th>
+            <th>Quantity</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+</template>

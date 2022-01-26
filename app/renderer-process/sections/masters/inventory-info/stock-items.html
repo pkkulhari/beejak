@@ -1,0 +1,67 @@
+<template>
+  <section id="stock-items" class="masters">
+    <div class="quick-buttons">
+      <div id="create-stock-item-btn" class="button">Create Stock Item</div>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="stockItem_data_table">
+        <thead>
+          <tr>
+            <th>Stock Item Name</th>
+            <th>Unit</th>
+            <th>Under</th>
+            <th>MRP / Unit</th>
+            <th>Pack Size</th>
+            <th>Opening Stock</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Pop-Up Models -->
+    <div class="model">
+      <form>
+        <div class="close">&#10005;</div>
+
+        <div class="input">
+          <label>Stock Item Name <span class="required">*</span></label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="input">
+          <label>Unit <span class="required">*</span></label>
+          <select id="unit" required>
+            <option value="" selected disabled hidden>Select Unit</option>
+          </select>
+        </div>
+        <div class="input">
+          <label>Under <span class="required">*</span></label>
+          <select id="under" required>
+            <option value="" selected disabled hidden>Select Item Group</option>
+          </select>
+        </div>
+        <div class="input">
+          <label>MRP / Unit <span class="required">*</span></label>
+          <input type="text" id="mrp" class="only_numeric" required />
+        </div>
+        <div class="input">
+          <label>Pack Size</label>
+          <input type="text" id="pack-size" class="only_numeric" />
+        </div>
+        <div class="input">
+          <label>Opening Stock</label>
+          <input type="text" id="opening-stock" class="only_numeric" />
+        </div>
+        <div class="input">
+          <label>Date<span class="required">*</span></label>
+          <input type="text" id="date" required />
+        </div>
+
+        <div class="save button">Save</div>
+      </form>
+    </div>
+  </section>
+</template>

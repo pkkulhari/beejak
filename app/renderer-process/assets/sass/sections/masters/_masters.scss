@@ -1,0 +1,124 @@
+.masters {
+  .quick-buttons > div.button {
+    background-color: $veryLightBlue;
+
+    &:active {
+      background-color: $white;
+    }
+  }
+
+  .tables {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .table-wrapper {
+    background-color: $white;
+    padding: 15px;
+    border: 1px solid $gray;
+    width: 100%;
+
+    caption {
+      font-style: italic;
+      text-decoration: underline;
+      font-size: 14px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    tbody {
+      tr {
+        cursor: pointer;
+
+        td:not(:first-child) {
+          text-align: center;
+
+          &:last-child {
+            display: flex;
+            justify-content: center;
+
+            button {
+              margin: 0 5px;
+              font-size: 12px;
+              padding: 3px 7px;
+              background-color: $veryLightBlue;
+
+              &:active {
+                background-color: $white;
+                border: 1px solid $gray;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    select,
+    input[type='search'] {
+      background-color: #ffffff !important;
+      border-radius: 0% !important;
+
+      &:focus,
+      &:active {
+        border: 1px solid !important;
+      }
+    }
+  }
+
+  .model {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.2);
+    display: none;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+      background-color: $white;
+      padding: 15px;
+      border: 1px solid $gray;
+
+      .input {
+        margin-bottom: 10px;
+      }
+
+      .close {
+        position: absolute;
+        border: 1px solid $gray;
+        top: 4px;
+        right: 4px;
+        padding: 0 4px;
+        cursor: context-menu;
+        user-select: none;
+        font-size: 12px;
+
+        &:hover {
+          background-color: $red;
+          border-color: $red;
+          color: #fff;
+        }
+      }
+
+      .save {
+        position: absolute;
+        right: 0;
+        bottom: calc(-32px - 15px);
+      }
+    }
+  }
+}

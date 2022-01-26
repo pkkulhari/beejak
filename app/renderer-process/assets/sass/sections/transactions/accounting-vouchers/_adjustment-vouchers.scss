@@ -1,0 +1,87 @@
+section.adjustment-vouchers {
+  .debit {
+    & > div {
+      flex-direction: column;
+      width: 100%;
+
+      & > div {
+        & > div {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        & > div:not(:first-child) {
+          background-color: $veryLightBlue;
+          padding: 15px;
+          padding-bottom: 20px;
+          border: 1px solid $gray;
+          margin-top: 15px;
+          position: relative;
+
+          .add-row-btn,
+          .remove-row-btn {
+            z-index: 1;
+            user-select: none;
+            background-color: $lightBlack;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0.3px 8px;
+            border: 1px solid $gray;
+            border-bottom: none;
+            border-right: none;
+          }
+
+          .remove-row-btn {
+            right: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  .credit {
+    & > div {
+      flex-direction: column;
+      width: 100%;
+
+      & > div {
+        & > div {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        & > div:not(:first-child) {
+          background-color: $veryLightBlue;
+          padding: 15px;
+          border: 1px solid $gray;
+          margin-top: 15px;
+          padding-bottom: 20px;
+          position: relative;
+
+          .add-row-btn,
+          .remove-row-btn {
+            z-index: 1;
+            user-select: none;
+            background-color: $lightBlack;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0.3px 8px;
+            border: 1px solid $gray;
+            border-bottom: none;
+            border-right: none;
+          }
+
+          .remove-row-btn {
+            right: 26px;
+          }
+        }
+      }
+    }
+  }
+}

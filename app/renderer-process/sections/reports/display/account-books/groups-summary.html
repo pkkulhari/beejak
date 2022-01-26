@@ -1,0 +1,52 @@
+<template>
+  <section id="groups-summary" class="reports">
+    <div class="header">
+      <div>
+        <div class="input">
+          <label>Group Name <span class="required">*</span></label>
+          <select id="group-name" tabindex="2">
+            <option value="" selected hidden disabled>Select Group</option>
+          </select>
+        </div>
+        <div class="input" style="visibility: hidden">
+          <label>Account</label>
+          <select id="account" tabindex="1">
+            <option value="groups" selected>Ledgers</option>
+            <option value="groups">Groups</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="first-date">From <span class="required">*</span></label>
+          <input type="text" id="first-date" tabindex="3" required />
+        </div>
+        <div class="input">
+          <label for="second-date">To <span class="required">*</span></label>
+          <input type="text" id="second-date" tabindex="4" required />
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="groups_summary_data_table" class="display">
+        <thead>
+          <tr>
+            <th rowspan="2">Perticular</th>
+            <th rowspan="2">Opening Balance</th>
+            <th colspan="2">Transctions</th>
+            <th rowspan="2">Closing Balance</th>
+          </tr>
+          <tr>
+            <th>Debit</th>
+            <th>Credit</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr></tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+</template>

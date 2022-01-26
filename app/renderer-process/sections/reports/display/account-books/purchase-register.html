@@ -1,0 +1,35 @@
+<template>
+  <section id="purchase-register" class="reports">
+    <div class="header">
+      <div>
+        <div class="input">
+          <label for="first-date">From <span class="required">*</span></label>
+          <input type="text" id="first-date" tabindex="3" required />
+        </div>
+        <div class="input">
+          <label for="second-date">To <span class="required">*</span></label>
+          <input type="text" id="second-date" tabindex="4" required />
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="purchase_register_data_table" class="display">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Party Name</th>
+            <th>Voucher No.</th>
+            <th>Debit Balance</th>
+            <th>Credit Balance</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr></tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+</template>

@@ -1,0 +1,38 @@
+<template>
+  <section id="units-of-measure" class="masters">
+    <div class="quick-buttons">
+      <div id="create-unit-of-measure-btn" class="button">Create Unit of Measure</div>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="unitsOfMeasure_data_table">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Formal Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Pop-Up Models -->
+    <div class="model">
+      <form>
+        <div class="close">&#10005;</div>
+
+        <div class="input">
+          <label>Symbol <span class="required">*</span></label>
+          <input type="text" id="symbol" required />
+        </div>
+        <div class="input">
+          <label>Formal Name <span class="required">*</span></label>
+          <input type="text" id="formal-name" required />
+        </div>
+
+        <div class="save button">Save</div>
+      </form>
+    </div>
+  </section>
+</template>

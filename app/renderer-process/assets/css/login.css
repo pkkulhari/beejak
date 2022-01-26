@@ -1,0 +1,88 @@
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login form {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  padding: 45px;
+  text-align: center;
+}
+#login form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #464646;
+}
+#login form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #209cee;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+#login form button:hover, #login form button:active, #login form button:focus {
+  background: #1086d5;
+}
+#login form #error {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  color: #ef3b3a;
+}
+#login .container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#login .container:before {
+  content: "";
+  display: block;
+  clear: both;
+}
+#login .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#login .container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+#login .container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+#login .container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+#login .container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+#login .container .info span .fa {
+  color: #ef3b3a;
+}/*# sourceMappingURL=login.css.map */

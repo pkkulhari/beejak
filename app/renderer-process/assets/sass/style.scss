@@ -1,0 +1,20 @@
+@import url('../css/fonts/roboto.css');
+
+@import 'variables';
+@import 'global';
+
+@import 'partials/sidebar-nav';
+@import 'sections/home';
+@import 'sections/masters/masters';
+@import 'sections/reports/reports';
+@import 'sections/transactions/accounting-vouchers/accounting-vouchers';
+@import 'sections/transactions/accounting-vouchers/purchase';
+@import 'sections/transactions/accounting-vouchers/sales/sales';
+@import 'sections/transactions/accounting-vouchers/adjustment-vouchers';
+
+@import 'sections/login.scss';
+@import 'sections/transactions/accounting-vouchers/sales/invoice-print-template.scss';
+@import url('../../../../node_modules/datatables.net-dt/css/jquery.dataTables.css');
+@import url('../../../../node_modules/alertifyjs/build/css/alertify.css');
+@import url('../../../../node_modules/flatpickr/dist/flatpickr.css');
+@import url('../../../../node_modules/flatpickr/dist/plugins/monthSelect/style.css');

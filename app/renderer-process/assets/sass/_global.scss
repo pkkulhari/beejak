@@ -1,0 +1,115 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $lightBlack !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: $fontSize_regular;
+  user-select: none;
+}
+
+#main-container {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+
+  main {
+    width: 85%;
+    margin-left: auto;
+    overflow-y: auto;
+    padding-left: 15px;
+
+    section {
+      display: none !important;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      &.show {
+        display: flex !important;
+      }
+    }
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    span.required {
+      color: red;
+    }
+
+    sup {
+      font-style: italic;
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid $gray;
+    margin: 5px 0;
+    width: 250px;
+    resize: none;
+    font-weight: 300;
+
+    &:focus {
+      border-color: #000;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.button {
+  background-color: $white;
+  border: 1px solid $gray;
+  padding: 7px 20px;
+  width: fit-content;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 0.3px;
+
+  &:active {
+    background-color: $veryLightBlue;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 17px;
+}
+::-webkit-scrollbar-track {
+  padding: 5px;
+  background: $lightBlack;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border: 1px solid $gray;
+}

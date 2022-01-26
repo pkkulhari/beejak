@@ -1,0 +1,247 @@
+<template>
+    <section id="sales" class="accounting-vouchers">
+        <form id="sales-form">
+            <div class="header">
+                <div>
+                    <div class="input">
+                        <label>Voucher No.</label>
+                        <input type="text" id="voucher-no" tabindex="1" disabled>
+                    </div>
+                    <div class="input" style="visibility: hidden;">
+                        <label>Supplier Invoice No.></label>
+                        <input type="text" id="supplier-inv-no" tabindex="1">
+                    </div>
+                </div>
+                <div>
+                    <div class="input">
+                        <label for="date">Date <span class="required">*</span></label>
+                        <input type="text" id="date" tabindex="2" required>
+                    </div>
+                    <div class="input">
+                        <label for="vahicle-no">Vahicle No.</label>
+                        <input type="text" id="vahicle-no" tabindex="3">
+                    </div>
+                </div>
+            </div>
+            <div class="party-detail">
+                <div>
+                    <div class="title">Bill To</div>
+                    <div>
+                        <div class="input">
+                            <label for="ledger-code">Code</label>
+                            <input type="text" id="ledger-code" tabindex="5" disabled>
+                        </div>
+                        <div class="input">
+                            <label for="ledger-name">Name <span class="required">*</span></label>
+                            <select id="ledger-name" tabindex="6" required>
+                                <option value="" selected hidden disabled>Select Ledger</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="input">
+                            <label for="ledger-gstin">GSTN</label>
+                            <input type="text" id="ledger-gstin" tabindex="7" disabled>
+                        </div>
+                        <div class="input">
+                            <label for="ledger-mobile">Mobile</label>
+                            <input type="text" id="ledger-mobile" tabindex="8" class="only_numeric mobile not_decimal"
+                                disabled>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="input">
+                            <label>Address 1</label>
+                            <textarea id="ledger-address-1" rows="5" tabindex="9" disabled></textarea>
+                        </div>
+                        <div class="input">
+                            <label>Address 2</label>
+                            <textarea id="ledger-address-2" rows="5" tabindex="10" disabled></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="title">Ship To</div>
+                    <div>
+                        <div class="input">
+                            <label for="ship-code">Code</label>
+                            <input type="text" id="ship-code" tabindex="5">
+                        </div>
+                        <div class="input">
+                            <label>Name <span class="required">*</span></label>
+                            <input type="text" id="ship-name" tabindex="5">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="input">
+                            <label for="ship-gstin">GSTN</label>
+                            <input type="text" id="ship-gstin" tabindex="7">
+                        </div>
+                        <div class="input">
+                            <label for="ship-mobile">Mobile</label>
+                            <input type="text" id="ship-mobile" tabindex="8" class="only_numeric not_decimal">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="input">
+                            <label>Address 1</label>
+                            <textarea id="ship-address-1" rows="5" tabindex="9"></textarea>
+                        </div>
+                        <div class="input">
+                            <label>Address 2</label>
+                            <textarea id="ship-address-2" rows="5" tabindex="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stock-items-detail">
+                <div class="row">
+                    <div class="input">
+                        <label>Item <span class="required">*</span></label>
+                        <select class="stock-item" required>
+                            <option value="" selected disabled hidden>Select Item</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="quantity">Quantity <span class="required">*</span></label>
+                        <input type="text" class="quantity only_numeric" required>
+                        <div class="stock"></div>
+                    </div>
+                    <div class="input">
+                        <label for="qty-2">Scheme Qty 1 <sup>Same Item</sup></label>
+                        <input type="text" class="scheme-qty-1 only_numeric">
+                    </div>
+                    <div class="input">
+                        <label for="qty-3">Scheme Qty 2 <sup>Different Item</sup></label>
+                        <input type="text" class="scheme-qty-2 only_numeric">
+                    </div>
+                    <div class="input">
+                        <label for="qty-1">Total Outward Qty</label>
+                        <input type="text" class="total-outward-qty" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="rate">Rate <span class="required">*</span></label>
+                        <select class="rate" required></select>
+                    </div>
+                    <div class="input">
+                        <label for="mrp">MRP/Unit</label>
+                        <input type="text" class="mrp" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="hsn-code">HSN/SAC Code</label>
+                        <input type="text" class="hsn-code" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="pack-size">Pack Size</label>
+                        <input type="text" class="pack-size" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="trade-price">Trade Price</label>
+                        <input type="text" class="trade-price" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="discount-1">Discount 1 <sup>Same Item</sup></label>
+                        <input type="text" class="discount-1" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="discount-2">Discount 2 <sup>Different Item</sup></label>
+                        <input type="text" class="discount-2 only_numeric">
+                    </div>
+                    <div class="input">
+                        <label for="taxable-amount">Taxable Amt.</label>
+                        <input type="text" class="taxable-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label>CGST</label>
+                        <input type="text" class="cgst-per" placeholder="%" disabled>
+                        <input type="text" class="cgst-amt" placeholder="Amount" disabled>
+                    </div>
+                    <div class="input">
+                        <label>SGST/UTGST</label>
+                        <input type="text" class="sgst-per" placeholder="%" disabled>
+                        <input type="text" class="sgst-amt" placeholder="Amount" disabled>
+                    </div>
+                    <div class="input">
+                        <label>CESS</label>
+                        <input type="text" class="cess-per" placeholder="%" disabled>
+                        <input type="text" class="cess-amt" placeholder="Amount" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-amount">Total Amount</label>
+                        <input type="text" class="total-amount" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="scheme-desc">Scheme Description <sup>Separate Item and Qty by forward slash (/), And
+                                multiple Items by comma (,)</sup></label>
+                        <textarea class="scheme-desc" rows="2"></textarea>
+                    </div>
+
+
+                    <a class="add-row-btn">&#43</a>
+                    <a class="remove-row-btn">&#8722</a>
+                </div>
+            </div>
+            <div class="footer">
+                <div>
+                    <div class="input">
+                        <label for="total-qty">Total Qty.</label>
+                        <input type="text" id="total-qty" disabled>
+                    </div>
+                    <div class="input">
+                        <label>Total Scheme Qty 1</label>
+                        <input type="text" id="total-scheme-qty-1" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-qty-2">Total Scheme Qty 2</label>
+                        <input type="text" id="total-scheme-qty-2" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-qty-3">Total Outward Qty</label>
+                        <input type="text" id="total-outward-qty" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-trade-price">Total Trade Price</label>
+                        <input type="text" id="total-trade-price" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-discount-1">Total Discount 1</label>
+                        <input type="text" id="total-discount-1" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-discount-2">Total Discount 2</label>
+                        <input type="text" id="total-discount-2" disabled>
+                    </div>
+                    <div class="input">
+                        <label>Total Taxable Amount</label>
+                        <input type="text" id="total-taxable-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-cgst-amt">Total CGST Amt.</label>
+                        <input type="text" id="total-cgst-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-cgst-amt">Total SGST/UTGST Amt.</label>
+                        <input type="text" id="total-sgst-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-cess-amt">Total CESS Amt.</label>
+                        <input type="text" id="total-cess-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-amount">Total Amount</label>
+                        <input type="text" id="total-amount" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <button id="print-btn" class="button" type="button">Print</button>
+                <button id="save-btn" class="button" type="submit">Save</button>
+            </div>
+        </form>
+    </section>
+</template>

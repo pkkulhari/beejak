@@ -1,0 +1,32 @@
+<template>
+  <section id="groups" class="masters">
+    <div class="quick-buttons">
+      <div id="create-group-btn" class="button">Create Group</div>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="group_data_table">
+        <thead>
+          <tr>
+            <th>Group Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Pop-Up Models -->
+    <div class="model">
+      <form>
+        <div class="close">&#10005;</div>
+
+        <div class="input">
+          <label>Group Name <span class="required">*</span></label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="save button">Save</div>
+      </form>
+    </div>
+  </section>
+</template>

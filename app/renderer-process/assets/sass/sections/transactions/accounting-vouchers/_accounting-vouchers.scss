@@ -1,0 +1,33 @@
+section.accounting-vouchers {
+  form {
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      & > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+        background-color: $white;
+        border: 1px solid $gray;
+
+        legend {
+          display: flex;
+          justify-content: center;
+          border-bottom: 1px solid $gray;
+          padding-bottom: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .btns {
+      margin-left: auto;
+      display: flex;
+      gap: 15px;
+      width: fit-content;
+    }
+  }
+}

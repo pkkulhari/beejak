@@ -1,0 +1,175 @@
+<template>
+    <section id="purchase" class="accounting-vouchers">
+        <form id="purchase-form">
+            <div class="header">
+                <div>
+                    <div class="input">
+                        <label>Voucher No. <span class="required">*</span></label>
+                        <input type="text" id="voucher-no" tabindex="1" required disabled>
+                    </div>
+                    <div class="input">
+                        <label>Supplier Invoice No. <span class="required">*</span></label>
+                        <input type="text" id="supplier-inv-no" tabindex="1" required>
+                    </div>
+                </div>
+                <div>
+                    <div class="input">
+                        <label for="date">Date <span class="required">*</span></label>
+                        <input type="text" id="date" tabindex="2" required>
+                    </div>
+                    <div class="input">
+                        <label for="vahicle-no">Vahicle No.</label>
+                        <input type="text" id="vahicle-no" tabindex="3">
+                    </div>
+                </div>
+            </div>
+            <div class="party-detail">
+                <div>
+                    <div>
+                        <div class="input">
+                            <label for="ledger-code">Code</label>
+                            <input type="text" id="ledger-code" tabindex="5" disabled>
+                        </div>
+                        <div class="input">
+                            <label for="ledger-name">Name <span class="required">*</span></label>
+                            <select id="ledger-name" tabindex="6" required>
+                                <option value="" selected hidden disabled>Select Ledger</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="input">
+                            <label for="ledger-gstin">GSTN</label>
+                            <input type="text" id="ledger-gstin" tabindex="7" disabled>
+                        </div>
+                        <div class="input">
+                            <label for="ledger-mobile">Mobile</label>
+                            <input type="text" id="ledger-mobile" tabindex="8" class="only_numeric mobile not_decimal"
+                                disabled>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-row">
+                        <div class="input">
+                            <label>Address 1</label>
+                            <textarea id="ledger-address-1" rows="5" tabindex="9" disabled></textarea>
+                        </div>
+                        <div class="input">
+                            <label>Address 2</label>
+                            <textarea id="ledger-address-2" rows="5" tabindex="10" disabled></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stock-items-detail">
+                <div class="row">
+                    <div class="input">
+                        <label for="stock-item">Item <span class="required">*</span></label>
+                        <select class="stock-item" required>
+                            <option value="" selected disabled hidden>Select Item</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="mrp">MRP/Unit</label>
+                        <input type="text" class="mrp" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="quantity">Quantity <span class="required">*</span></label>
+                        <input type="text" class="quantity only_numeric" required>
+                        <div class="stock">Available: 2000 CS</div>
+                    </div>
+                    <div class="input">
+                        <label for="hsn-code">HSN/SAC Code</label>
+                        <input type="text" class="hsn-code" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="pack-size">Pack Size</label>
+                        <input type="text" class="pack-size" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="rate">Rate <span class="required">*</span></label>
+                        <input type="text" class="rate only_numeric" required>
+                    </div>
+                    <div class="input">
+                        <label>Discount</label>
+                        <input type="text" class="discount only_numeric">
+                    </div>
+                    <div class="input">
+                        <label for="taxable-amount">Taxable Amt.</label>
+                        <input type="text" class="taxable-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label>CGST</label>
+                        <input type="text" class="cgst-per" placeholder="%" disabled>
+                        <input type="text" class="cgst-amt" placeholder="Amount" disabled>
+                    </div>
+                    <div class="input">
+                        <label>SGST/UTGST</label>
+                        <input type="text" class="sgst-per" placeholder="%" disabled>
+                        <input type="text" class="sgst-amt" placeholder="Amount" disabled>
+                    </div>
+                    <div class="input">
+                        <label>CESS</label>
+                        <input type="text" class="cess-per" placeholder="%" disabled>
+                        <input type="text" class="cess-amt" placeholder="Amount" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="trade-price">Trade Price</label>
+                        <input type="text" class="trade-price" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-amount">Total Amount</label>
+                        <input type="text" class="total-amount" disabled>
+                    </div>
+                    <a class="add-row-btn">&#43</a>
+                    <a class="remove-row-btn">&#8722</a>
+                </div>
+            </div>
+            <div class="footer">
+                <div>
+                    <div class="input">
+                        <label for="total-qty">Total Quantity</label>
+                        <input type="text" id="total-qty" disabled>
+                    </div>
+                    <div class="input">
+                        <label>Total Discount</label>
+                        <input type="text" id="total-discount" disabled>
+                    </div>
+                    <div class="input">
+                        <label>Total Taxable Amount</label>
+                        <input type="text" id="total-taxable-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-cgst-amt">Total CGST Amt.</label>
+                        <input type="text" id="total-cgst-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-cgst-amt">Total SGST/UTGST Amt.</label>
+                        <input type="text" id="total-sgst-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-cess-amt">Total CESS Amt.</label>
+                        <input type="text" id="total-cess-amt" disabled>
+                    </div>
+                    <div class="input">
+                        <label>TCS</label>
+                        <input type="text" id="tcs-per" placeholder="%" class="only_numeric">
+                        <input type="text" id="tcs-amt" placeholder="Amount" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-trade-price">Total Trade Price</label>
+                        <input type="text" id="total-trade-price" disabled>
+                    </div>
+                    <div class="input">
+                        <label for="total-amount">Total Amount</label>
+                        <input type="text" id="total-amount" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <button id="save-btn" class="button" type="submit">Save</button>
+            </div>
+        </form>
+    </section>
+</template>

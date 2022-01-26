@@ -1,0 +1,40 @@
+{
+  "name": "beejak",
+  "productName": "Beejak",
+  "version": "1.0.0",
+  "description": "Beejak is a retail desktop application for small businesses",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkkulhari/beejak.git"
+  },
+  "author": "Praveen Kumar <praveen.kulhari07@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/pkkulhari/beejak/issues"
+  },
+  "homepage": "https://github.com/pkkulhari/beejak#readme",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "alertifyjs": "^1.13.1",
+    "async": "^3.2.0",
+    "bcrypt": "^5.0.1",
+    "chart.js": "^3.3.2",
+    "cls-hooked": "^4.2.2",
+    "datatables.net": "^1.10.24",
+    "datatables.net-dt": "^1.10.24",
+    "electron-reload": "^1.5.0",
+    "exceljs": "^4.2.1",
+    "flatpickr": "^4.6.9",
+    "glob": "^7.1.6",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1",
+    "mousetrap": "^1.6.5",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "electron": "^16.0.7"
+  }
+}

@@ -1,0 +1,72 @@
+<template>
+  <section id="rates" class="masters">
+    <div class="quick-buttons">
+      <div id="new-rate-btn" class="button">New Rate</div>
+    </div>
+
+    <div class="tables">
+      <div class="table-wrapper">
+        <table id="saleItemsPrice_data_table">
+          <caption>
+            Sale Prices
+          </caption>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Item Name</th>
+              <th>Rate</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="table-wrapper">
+        <table id="purchaseItemsPrice_data_table">
+          <caption>
+            Purchase Prices
+          </caption>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Item Name</th>
+              <th>Rate</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pop-Up Models -->
+    <div class="model">
+      <form>
+        <div class="close">&#10005;</div>
+
+        <div class="input">
+          <label>Item <span class="required">*</span></label>
+          <select name="item" required>
+            <option value="" selected disabled hidden>Select Item</option>
+          </select>
+        </div>
+        <div class="input">
+          <label>Type <span class="required">*</span></label>
+          <select name="type" required>
+            <option value="" selected disabled hidden>Select Type</option>
+            <option value="sale">Sale</option>
+            <option value="purchase">Purchase</option>
+          </select>
+        </div>
+        <div class="input">
+          <label>Rate <span class="required">*</span></label>
+          <input type="number" name="rate" required />
+        </div>
+        <div class="input">
+          <label>Date <span class="required">*</span></label>
+          <input type="text" name="date" required />
+        </div>
+
+        <div class="save button">Save</div>
+      </form>
+    </div>
+  </section>
+</template>

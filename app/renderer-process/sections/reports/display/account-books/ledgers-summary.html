@@ -1,0 +1,56 @@
+<template>
+  <section id="ledgers-summary" class="reports">
+    <div class="header">
+      <div>
+        <div class="input">
+          <label>Ledger Name <span class="required">*</span></label>
+          <select id="ledger-name" tabindex="2">
+            <option value="" selected hidden disabled>Select Ledger</option>
+          </select>
+        </div>
+        <div class="input" style="visibility: hidden">
+          <label>Account</label>
+          <select id="account" tabindex="1">
+            <option value="ledgers" selected>Ledgers</option>
+            <option value="groups">Groups</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="first-date">From <span class="required">*</span></label>
+          <input type="text" id="first-date" tabindex="3" required />
+        </div>
+        <div class="input">
+          <label for="second-date">To <span class="required">*</span></label>
+          <input type="text" id="second-date" tabindex="4" required />
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="ledgers_summary_data_table" class="display">
+        <thead>
+          <tr>
+            <th colspan="4" style="text-align: right">Opening Balance:</th>
+            <th colspan="2" id="opening-balance"></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Date</th>
+            <th>Perticular</th>
+            <th>Voucher Type</th>
+            <th>Voucher No.</th>
+            <th>Debit</th>
+            <th>Credit</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr></tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+</template>

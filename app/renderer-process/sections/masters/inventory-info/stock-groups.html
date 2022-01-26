@@ -1,0 +1,53 @@
+<template>
+  <section id="stock-groups" class="masters">
+    <div class="quick-buttons">
+      <div id="create-stock-group-btn" class="button">Create Stock Group</div>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="stockGroup_data_table">
+        <thead>
+          <tr>
+            <th>Stock Group Name</th>
+            <th>HSN Code</th>
+            <th>CGST %</th>
+            <th>SGST %</th>
+            <th>CESS %</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Pop-Up Models -->
+    <div class="model">
+      <form>
+        <div class="close">&#10005;</div>
+
+        <div class="input">
+          <label>Stock Group Name <span class="required">*</span></label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="input">
+          <label>HSN Code <span class="required">*</span></label>
+          <input type="text" id="hsn-code" class="only_numeric not_decimal" required />
+        </div>
+        <div class="input">
+          <label>CGST % <span class="required">*</span></label>
+          <input type="text" id="cgst-per" class="only_numeric" required />
+        </div>
+        <div class="input">
+          <label>SGST % <span class="required">*</span></label>
+          <input type="text" id="sgst-per" class="only_numeric" required />
+        </div>
+        <div class="input">
+          <label>CESS % <span class="required">*</span></label>
+          <input type="text" id="cess-per" class="only_numeric" required />
+        </div>
+
+        <div class="save button">Save</div>
+      </form>
+    </div>
+  </section>
+</template>

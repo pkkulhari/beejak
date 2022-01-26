@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./app/renderer-process/assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="main-container">
+      <nav id="sidebar-menu">
+        <div class="header">
+          <span class="arrow-left">❮</span><span class="menu-title">Gateway of Beejak</span>
+        </div>
+        <ul>
+          <li class="active" data-id="home">Home</li>
+          <li>
+            <span>Masters</span>
+            <ul>
+              <li>
+                <span>Account Info</span>
+                <ul>
+                  <li data-id="groups">Groups</li>
+                  <li data-id="ledgers">Ledgers</li>
+                </ul>
+              </li>
+              <li>
+                <span>Inventory Info.</span>
+                <ul>
+                  <li data-id="stock-groups">Stock Groups</li>
+                  <li data-id="stock-items">Stock Items</li>
+                  <li data-id="units-of-measure">Units of Measure</li>
+                  <li data-id="rates">Rates</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Transactions</span>
+            <ul>
+              <li>
+                <span>Accounting Vouchers</span>
+                <ul>
+                  <li data-id="sales">Sales</li>
+                  <li data-id="purchase">Purchase</li>
+                  <li data-id="payment-voucher">Payment</li>
+                  <li data-id="receipt-voucher">Receipt</li>
+                  <li data-id="contra-voucher">
+                    Contra</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Reports</span>
+            <ul>
+              <li data-id="stock-summary">Stock Summary</li>
+              <li>
+                <span>Display</span>
+                <ul>
+                  <li>
+                    <span>Account Books</span>
+                    <ul>
+                      <li data-id="purchase-register">Purchase Register</li>
+                      <li data-id="sales-register">Sales Register</li>
+                      <li data-id="ledgers-summary">Ledgers Summary</li>
+                      <li data-id="groups-summary">Groups Summary</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Other Reports</span>
+            <ul>
+              <li data-id="purchase-discounts">Purchase Discounts</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <main id="content"></main>
+    </div>
+
+    <script type="module">
+      require('./app/renderer-process/assets/js/index')
+    </script>
+  </body>
+</html>

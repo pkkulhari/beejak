@@ -1,0 +1,65 @@
+<template>
+  <section id="ledgers" class="masters">
+    <div class="quick-buttons">
+      <div id="create-ledger-btn" class="button">Create Ledger</div>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="ledger_data_table">
+        <thead>
+          <tr>
+            <th>Ledger Name</th>
+            <th>Under</th>
+            <th>GSTIN</th>
+            <th>Mobile</th>
+            <th>Address 1</th>
+            <th>Address 2</th>
+            <th>Opening Balance</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Pop-Up Models -->
+    <div class="model">
+      <form>
+        <div class="close">&#10005;</div>
+
+        <div class="input">
+          <label>Ledger Name <span class="required">*</span></label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="input">
+          <label>Under <span class="required">*</span></label>
+          <select id="under" required>
+            <option value="" disabled, selected, hidden>Select Group</option>
+          </select>
+        </div>
+        <div class="input">
+          <label>GSTIN</label>
+          <input type="text" id="gstin" class="gstin" />
+        </div>
+        <div class="input">
+          <label>Mobile</label>
+          <input type="text" id="mobile" class="only_numeric not_decimal" maxlength="12" />
+        </div>
+        <div class="input">
+          <label>Address 1</label>
+          <textarea rows="5" id="address1"></textarea>
+        </div>
+        <div class="input">
+          <label>Address 2</label>
+          <textarea rows="5" id="address2"></textarea>
+        </div>
+        <div class="input">
+          <label>Opening Balance</label>
+          <input type="text" id="opening-balance" />
+        </div>
+
+        <div class="save button">Save</div>
+      </form>
+    </div>
+  </section>
+</template>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../../../assets//css/invoice-print-template.css" />
+  </head>
+
+  <body>
+    <div id="invoice">
+      <div class="compony-detail">
+        <div>
+          <div class="compony-name">PRADEEP & COMPANY</div>
+          <div class="compony-address">
+            (Pepsi Churu Hub) Near Appno Patrol Pump, <br />
+            NH-65, Churu
+          </div>
+        </div>
+        <div>
+          <div class="wrapper">
+            <p><strong>GSTIN:</strong> 08ARHPS1386F1ZI</p>
+            <p><strong>FSS No.:</strong> 12214020000004</p>
+          </div>
+        </div>
+      </div>
+      <div class="customer-detail">
+        <div class="bill-to">
+          <div class="title">Bill To</div>
+          <p><strong>Code: </strong><span id="bill_cust_code"></span></p>
+          <p><strong>Name: </strong><span id="bill_cust_name"></span></p>
+          <p><strong>GSTN: </strong><span id="bill_cust_gstin"></span></p>
+          <p><strong>Mobile: </strong><span id="bill_cust_mobile"></span></p>
+          <p><strong>Address: </strong><span id="bill_cust_address"></span></p>
+        </div>
+        <div class="ship-to">
+          <div class="title">Ship To</div>
+          <p><strong>Code: </strong><span id="ship_cust_code"></span></p>
+          <p><strong>Name: </strong><span id="ship_cust_name"></span></p>
+          <p><strong>GSTN: </strong><span id="ship_cust_gstin"></span></p>
+          <p><strong>Mobile: </strong><span id="ship_cust_mobile"></span></p>
+          <p><strong>Address: </strong><span id="ship_cust_address"></span></p>
+        </div>
+        <div class="invoice-info">
+          <div class="wrapper">
+            <p><strong>Invoice No.: </strong><span id="inv_no"></span></p>
+            <p><strong>Invoice Date: </strong><span id="inv_date"></span></p>
+            <p><strong>Vahicle No.: </strong><span id="vahicle_no"></span></p>
+          </div>
+        </div>
+      </div>
+      <div class="items-detail">
+        <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-uzvj" rowspan="2">S. <br />No.</th>
+              <th class="tg-uzvj" rowspan="2">Description of Items</th>
+              <th class="tg-uzvj" rowspan="2">HSN/SAC<br />Code</th>
+              <th class="tg-uzvj" rowspan="2">MRP/<br />Unit</th>
+              <th class="tg-uzvj" rowspan="2">Pack<br />Size</th>
+              <th class="tg-uzvj" rowspan="2">Rate</th>
+              <th class="tg-uzvj" rowspan="2">Qty</th>
+              <th class="tg-uzvj" rowspan="2">Unit</th>
+              <th class="tg-uzvj" rowspan="2">Trade<br />Price</th>
+              <th class="tg-uzvj" rowspan="2">Disc.</th>
+              <th class="tg-uzvj" rowspan="2">Taxable<br />Amount</th>
+              <th class="tg-uzvj" colspan="2">CGST</th>
+              <th class="tg-uzvj" colspan="2">SGST/<br />UTGST</th>
+              <th class="tg-uzvj" colspan="2">CESS</th>
+              <th class="tg-uzvj" rowspan="2">Total<br />Amount</th>
+              <th class="tg-uzvj" rowspan="2">Scheme<br />Desc.</th>
+            </tr>
+            <tr>
+              <td class="tg-uzvj">%</td>
+              <td class="tg-uzvj">Amount</td>
+              <td class="tg-uzvj">%</td>
+              <td class="tg-uzvj">Amount</td>
+              <td class="tg-uzvj">%</td>
+              <td class="tg-uzvj">Amount</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr>
+              <td class="tg-wa1i" colspan="6">Total</td>
+              <td class="tg-zt7h" id="total_qty"></td>
+              <td></td>
+              <td class="tg-zt7h" id="total_trade_price"></td>
+              <td class="tg-zt7h" id="total_discount"></td>
+              <td class="tg-zt7h" id="total_taxable_amt"></td>
+              <td class="tg-zt7h"></td>
+              <td class="tg-zt7h" id="total_cgst_amt"></td>
+              <td class="tg-zt7h"></td>
+              <td class="tg-zt7h" id="total_sgst_or_utgst_amt"></td>
+              <td class="tg-zt7h"></td>
+              <td class="tg-zt7h" id="total_cess_amt"></td>
+              <td class="tg-zt7h" id="total_amt"></td>
+              <td class="tg-zt7h"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="footer">
+        <div class="summary">
+          <table class="tg">
+            <thead>
+              <tr>
+                <th class="tg-uzvj" rowspan="2">HSN Code</th>
+                <th class="tg-uzvj" colspan="2">CGST</th>
+                <th class="tg-uzvj" colspan="2">SGST/<br />UTGST</th>
+                <th class="tg-uzvj" colspan="2">CESS</th>
+              </tr>
+              <tr>
+                <td class="tg-uzvj">%</td>
+                <td class="tg-uzvj">Amount</td>
+                <td class="tg-uzvj">%</td>
+                <td class="tg-uzvj">Amount</td>
+                <td class="tg-uzvj">%</td>
+                <td class="tg-uzvj">Amount</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+              <tr>
+                <td class="tg-wa1i">Total</td>
+                <td class="tg-zt7h"></td>
+                <td class="tg-zt7h" id="summary_total_cgst_amt"></td>
+                <td class="tg-zt7h"></td>
+                <td class="tg-zt7h" id="summary_total_sgst_amt"></td>
+                <td class="tg-zt7h"></td>
+                <td class="tg-zt7h" id="summary_total_cess_amt"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="sign">
+          <p>For: Pradeep & Compony</p>
+          <p>Proprietor/Manager</p>
+        </div>
+      </div>
+      <div class="notes">
+        <p>
+          <span>Warranty: </span> I/we hearby certify that food(s) mentioned in the Invoice is/are
+          warranted of nature and quality.
+        </p>
+      </div>
+    </div>
+
+    <script src="../../../../assets/js/sections//transactions//accounting-vouchers//sales/invoice-print-template.js"></script>
+  </body>
+</html>
